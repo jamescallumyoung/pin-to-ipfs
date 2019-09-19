@@ -1,6 +1,6 @@
 {
   "name": "@jych/pin-to-ipfs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Pin files to IPFS with PinataSDK",
   "private": false,
   "main": "src/index.js",
@@ -19,7 +19,7 @@
     "publish-please": "publish-please",
     "prepublishOnly": "publish-please guard"
   },
-  "bin": "src/index.js",
+  "bin" : { "pin-to-ipfs" : "./src/index.js" },
   "keywords": [
     "ipfs",
     "pinata"
