@@ -1,0 +1,23 @@
+{
+  "name": "ipfs-tasks",
+  "version": "1.0.0",
+  "description": "Pins files to IPFS with PinataSDK",
+  "main": "pin-to-ipfs.js",
+  "dependencies": {
+    "@pinata/sdk": "^1.1.1",
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "ipfs:pin": "node pin-to-ipfs.js",
+    "start": "echo \"Usage: npm run ipfs:pin\" && exit 1",
+    "help": "npm run ipfs:pin -- --help",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ipfs",
+    "pinata"
+  ],
+  "author": "hello@jamesyoung.ch",
+  "license": "ISC"
+}
