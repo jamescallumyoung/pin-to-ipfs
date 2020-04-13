@@ -5,17 +5,35 @@
 const pinataSDK = require('@pinata/sdk');
 const argv = require('minimist')(process.argv.slice(2));
 
-const { key, secret, dir, help, h, name, v, verbose } = argv;
+let {
+    key,
+    secret,
+    dir,
+    name,
+    h, help,
+    v, verbose,
+    f, file } = argv;
 
 const helpMsg = "Arguments:\n" +
     "--key : Your Pinata API Key (required)\n" +
     "--secret : Your Pinata API Secret (required)\n" +
     "--dir : Path of the directory to upload (required)\n" +
-    "--name : The name of the Pin (optional)";
+    "--name : The name of the Pin (optional)\n\n" +
+    "Alternatively:\n" +
+    "--file : path/to/config/file.json (see readme)"
 
 if ( h || help ) {
     console.info(helpMsg);
     process.exit();
+}
+
+if ( f || file ) {
+    const filePath = f || file;
+    const confFile = require(filePath);
+    key = confFile.key || key;
+    secret = confFile.secret || secret;
+    dir = confFile.dir || dir;
+    name = confFile.name || name;
 }
 
 if ( !key || !secret || !dir ) {
