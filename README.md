@@ -1,3 +1,9 @@
+> Deprecated in favor of a newer GitHub Action that provides the same functionality.
+>
+> Use https://github.com/jamescallumyoung/pinata-publish-action instead.
+
+# pin-to-ipfs
+
 A small Node.JS utility to pin files to the [IPFS](https://ipfs.io/) network using [Pinata](https://pinata.cloud).
 
 Install:

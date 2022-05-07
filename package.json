@@ -1,6 +1,6 @@
 {
   "name": "@jych/pin-to-ipfs",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Pin files to the IPFS network with Pinata",
   "dependencies": {
     "@pinata/sdk": "^1.1.1",
